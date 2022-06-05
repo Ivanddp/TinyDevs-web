@@ -1,0 +1,193 @@
+//paleta https://coolors.co/c60000-fffbfc-00c275-09006f-222020
+//--russian-violet: #05003E;
+//font-family: Rajdhani;
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@100;200;300;400;500;600;700&display=swap");
+
+//Variables Variables
+:root {
+  /*colores colores*/
+  --red-international: #c60000;
+  --snow: #fffbfc;
+  --esmerald: #00c275;
+  --navy-blue: #07004f;
+  --eerie-black: #151515;
+  /*colores colores*/
+
+  /*variables variables*/
+  --padding-top: 35px;
+  --padding-left: 50px;
+  --z-index-hamburger: 10000000;
+  /*variables variables*/
+
+  /*Tipografia Tipografia*/
+  --big-shoulders: "Big Shoulders Stencil Display", cursive;
+  --rajdhani: "Rajdhani", sans-serif;
+  /*Tipografia Tipografia*/
+}
+//Variables Variables
+
+//body
+body {
+  //background-color: var(--eerie-black);
+  background-image: url("../assets/pb-p1-linebg.png"),
+    url("../assets/economy-bg.png");
+  background-repeat: no-repeat, repeat;
+  background-position: top center, center center;
+}
+//body
+
+//header
+#header {
+  //width: 100%;
+  //height: 80px;
+  //background-color: #07004f;
+  background-color: transparent;
+  //opacity: 0.20;
+
+  #navbar {
+    #navbar__link {
+      position: fixed;
+      top: 0px;
+      bottom: 0px;
+      color: var(--snow); //letras
+      font-family: var(--rajdhani);
+      font-size: 25px;
+      z-index: calc(var(--z-index-hamburger) - 10);
+      width: 218.75px;
+      height: 100vh;
+      background-color: var(--eerie-black);
+      display: flex;
+
+      align-items: center;
+      display:none;/*BUTtton*/
+
+      ul {
+        display: flex;
+        flex-direction: column;
+
+        row-gap: 28px;
+        padding-left: var(--padding-left);
+        font-size: 26.4476px;
+
+
+        li{
+          transition:  0.2s all;
+          //https://coolors.co/151515-6457a6
+          &:hover{
+            color: #00C275;
+          }
+
+        }
+
+
+      }
+    }
+  }
+
+  #navbar {
+    #hamburger-wrapper {
+      z-index: var(--z-index-hamburger);
+      position: fixed;
+      top: var(--padding-top);
+      left: var(--padding-left);
+      button {
+        cursor: pointer;
+        width: 30px;
+        height: 24px;
+        margin: auto;
+        border: 0;
+        background: 0 0;
+        outline: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: 6px;
+        li {
+          background-color: #fff;
+          border-radius: 2px;
+          content: "";
+          display: block;
+          width: 100%;
+          height: 3px;
+        }
+      }
+    }
+  }
+}
+//header
+
+//hero
+#hero {
+  min-width: 100%;
+  min-height: 100%;
+  position: relative;
+
+  video::-internal-media-controls-download-button {
+    display: none;
+  }
+  video {
+    pointer-events: none;
+    min-width: 100%;
+    min-height: 100%;
+    object-position: center;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    //background-color: #00c2741e;
+    background-color: #00000060;
+  }
+
+  #hero__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 200;
+    font-family: var(--big-shoulders);
+    color: var(--snow);
+    text-align: center;
+    text-transform: uppercase;
+    animation-name: textHero;
+    animation-duration: 3s;
+    letter-spacing: 2px;
+    transition: 0.5s linear;
+
+    &:hover {
+      font-style: italic;
+      letter-spacing: 4px;
+      text-shadow: 0 0 5px #fff, 0 0 15px #fff, 0 0 35px #fff;
+    }
+
+    h3 {
+      font-weight: bold;
+      font-size: 90px;
+    }
+
+    p {
+      margin-top: 80px;
+      font-weight: bold;
+      font-size: 60px;
+    }
+  }
+}
+//hero
+
+@keyframes textHero {
+  0% {
+    opacity: 0;
+    filter: blur(18px);
+    top: 70%;
+    text-shadow: 0 0 5px #fff, 0 0 15px #fff, 0 0 35px #fff;
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+    top: 50%;
+  }
+}
