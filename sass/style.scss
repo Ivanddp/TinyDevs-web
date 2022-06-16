@@ -1,0 +1,59 @@
+//paleta https://coolors.co/c60000-fffbfc-00c275-09006f-222020
+//--russian-violet: #05003E;
+//font-family: Rajdhani;
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@100;200;300;400;500;600;700&display=swap");
+
+//Variables Variables
+:root {
+  /*colores colores*/
+  --red-international: #c60000;
+  --snow: #fffbfc;
+  --esmerald: #00c275;
+  --navy-blue: #07004f;
+  --eerie-black: #151515;
+  /*colores colores*/
+
+  /*variables variables*/
+  --padding-top: 35px;
+  --padding-left: 50px;
+  --z-index-hamburger: 10000000;
+  /*variables variables*/
+
+  /*Tipografia Tipografia*/
+  --big-shoulders: "Big Shoulders Stencil Display", cursive;
+  --rajdhani: "Rajdhani", sans-serif;
+  /*Tipografia Tipografia*/
+}
+//Variables Variables
+
+/*********************************************************************************************************************************************/
+
+//ocultar
+.hidden {
+  display: none !important;
+}
+
+//ocultar
+
+//body
+body {
+  //background-color: var(--eerie-black);
+  background-image: url("../assets/pb-p1-linebg.png"),
+    url("../assets/economy-bg.png");
+  background-repeat: no-repeat, repeat;
+  background-position: top center, center center;
+}
+//body
+
+/*media querys*/
+
+@media only screen and (max-width: 992px) {
+  :root {
+    /*variables variables*/
+    --padding-left: 28px;
+    /*variables variables*/
+  }
+}
+
+/*media querys*/

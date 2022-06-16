@@ -6,20 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TinyDevs</title>
     <link rel="icon" type="image/x-icon" href="/assets/logo.png" />
-    <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/config/app.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/header/header.css" />
+    <link rel="stylesheet" href="css/hero/hero.css" />
+    
   </head>
   <body>
-    <header id="header">
-      <nav id="navbar">
-        <div id="hamburger-wrapper">
-          <button>
+    <header class="header">
+      <nav class="header__navbar">
+        <div class="navbar__hamburger-wrapper">
+          <button id="hamburger">
             <li></li>
             <li></li>
             <li></li>
           </button>
         </div>
-        <div id="navbar__link">
+        <div class="navbar__link hidden" id="navbar__link"  >
           <ul>
             <li>ABOUT</li>
             <li>NEWS</li>
@@ -29,15 +32,40 @@
         </div>
       </nav>
     </header>
-    <div id="hero">
-      <video autoplay muted loop playsinline id="hero__video">
+    <div class="hero">
+      <video autoplay muted loop playsinline class="hero__video">
         <source src="assets/videoplayback.mp4" type="video/mp4" />
       </video>
 
-      <div id="hero__text">
+      <div class="hero__text">
         <h3>DevsChad presenta</h3>
-        <p>TinyDevs</p>
+        <p >TinyDevs</p>
       </div>
     </div>
+
+    <script>
+      const navbar__link=document.getElementById("navbar__link");
+      const hamburgerButton=document.getElementById("hamburger");
+
+
+
+      
+
+      hamburgerButton.addEventListener("click",()=>{
+
+        console.log(navbar__link)
+        navbar__link.classList.toggle("hidden");
+
+
+      })
+
+     
+
+     
+      
+
+
+    </script>
+
   </body>
 </html>
