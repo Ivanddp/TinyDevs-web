@@ -50,11 +50,10 @@
       font-size: 80px;
       //font-size: clamp(35px,6.33vw,80px);//para pantalla maximo 1500
       //font-size: 35px;
-      line-height: 1;
     }
 
     p {
-      margin-top: 45px;
+      margin-top: 68.5px;
       font-weight: bold;
       //font-size: clamp(23.5px,4vw,60px);
       font-size: 60px;
@@ -75,3 +74,64 @@
     top: 50%;
   }
 }
+
+/*media querys*/
+
+@media only screen and (max-width: 992px) {
+  .hero {
+    .hero__text {
+      h3 {
+        font-size: 70px; //modifeq
+      }
+
+      p {
+        margin-top: 58.5px; //modifiq
+
+        font-size: 50px; //modifiq
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+  .hero {
+    .hero__text {
+      h3 {
+        font-size: 60px; //modifeq
+      }
+
+      p {
+        margin-top: 48.5px; //modifiq
+
+        font-size: 45px; //modifiq
+      }
+    }
+  }
+
+
+  
+
+}
+
+
+
+@media only screen and (max-width: 600px) {
+
+  .hero {
+    .hero__text {
+      h3 {
+        font-size: clamp(39.5px,10.72vw,60px); //modifeq
+      }
+
+      p {
+        margin-top: clamp(28.5px,8.08vw, 48.5px); //modifiq
+
+        font-size: clamp(29.5px,8.04vw, 45px); //modifiq
+      }
+    }
+  }
+}
+
+
+/*media querys*/

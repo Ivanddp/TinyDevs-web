@@ -56,4 +56,12 @@ body {
   }
 }
 
+@media only screen and (max-width: 600px) {
+  :root {
+    /*variables variables*/
+    --padding-left: 20px;
+    /*variables variables*/
+  }
+}
+
 /*media querys*/

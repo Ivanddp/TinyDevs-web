@@ -42,10 +42,9 @@
 .hero .hero__text h3 {
   font-weight: bold;
   font-size: 80px;
-  line-height: 1;
 }
 .hero .hero__text p {
-  margin-top: 45px;
+  margin-top: 68.5px;
   font-weight: bold;
   font-size: 60px;
 }
@@ -63,5 +62,34 @@
     top: 50%;
   }
 }
+/*media querys*/
+@media only screen and (max-width: 992px) {
+  .hero .hero__text h3 {
+    font-size: 70px;
+  }
+  .hero .hero__text p {
+    margin-top: 58.5px;
+    font-size: 50px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .hero .hero__text h3 {
+    font-size: 60px;
+  }
+  .hero .hero__text p {
+    margin-top: 48.5px;
+    font-size: 45px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .hero .hero__text h3 {
+    font-size: clamp(39.5px, 10.72vw, 60px);
+  }
+  .hero .hero__text p {
+    margin-top: clamp(28.5px, 8.08vw, 48.5px);
+    font-size: clamp(29.5px, 8.04vw, 45px);
+  }
+}
+/*media querys*/
 
 /*# sourceMappingURL=hero.css.map */
